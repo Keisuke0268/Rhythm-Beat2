@@ -1,0 +1,9 @@
+{
+  "notes": [
+    { "time": 1000, "lane": 0, "type": "tap" },
+    { "time": 1500, "lane": 1, "type": "tap" },
+    { "time": 2000, "lane": 2, "type": "hold" },
+    { "time": 3000, "lane": 3, "type": "flick" },
+    { "time": 4000, "lane": 1, "type": "slide" }
+  ]
+}
