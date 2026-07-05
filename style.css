@@ -95,7 +95,14 @@ button:active {
     border-radius: 12px;
     background: #33dd66;
 }
-
+.flick{
+    position:absolute;
+    width:80%;
+    height:24px;
+    left:10%;
+    border-radius:12px;
+    background:#ff66cc;
+}
 #judgeLine {
     position: absolute;
     left: 0;
