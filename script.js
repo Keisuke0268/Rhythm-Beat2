@@ -42,6 +42,8 @@ if (noteType < 0.20) {
     note.className = "hold";
 } else if (noteType < 0.40) {
     note.className = "flick";
+} else if (noteType < 0.60) {
+    note.className = "slide";
 } else {
     note.className = "note";
 }
@@ -118,7 +120,24 @@ if (note.classList.contains("hold")) {
     });
 
   }
-  
+  if (note.classList.contains("slide")) {
+
+    note.addEventListener("touchmove", () => {
+
+        if (!note.parentNode) return;
+
+        score += 1300;
+        combo++;
+
+        judgeText.textContent = "SLIDE";
+
+        updateHUD();
+
+        note.remove();
+
+    });
+
+}
   note.addEventListener("click", () => {
 
     if (!note.parentNode) return;
