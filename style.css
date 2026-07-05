@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#menu {
+    width: 95%;
+    max-width: 420px;
+    margin-top: 20px;
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#menu h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #00b7ff;
+    color: white;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#game {
+    width: 360px;
+    max-width: 95vw;
+    height: 640px;
+    margin-top: 20px;
+    background: black;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #666;
+}
+
+.lane {
+    flex: 1;
+    position: relative;
+    border-left: 1px solid #444;
+}
+
+.lane:last-child {
+    border-right: 1px solid #444;
+}
+
+.note {
+    position: absolute;
+    width: 80%;
+    height: 24px;
+    left: 10%;
+    border-radius: 12px;
+    background: #00b7ff;
+}
+
+.hold {
+    position: absolute;
+    width: 80%;
+    height: 120px;
+    left: 10%;
+    border-radius: 12px;
+    background: #33dd66;
+}
+
+#judgeLine {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+    height: 4px;
+    background: #ff4444;
+    z-index: 100;
+}
+
+#hud {
+    width: 360px;
+    max-width: 95vw;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#judge {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 22px;
+    margin: 6px 0;
+  }
