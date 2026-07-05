@@ -120,7 +120,8 @@ if (note.classList.contains("hold")) {
     });
 
   }
-  if (note.classList.contains("slide")) {
+  
+    if (note.classList.contains("slide")) {
 
     note.addEventListener("touchmove", () => {
 
