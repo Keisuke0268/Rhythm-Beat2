@@ -16,6 +16,8 @@ function updateHUD() {
 }
 
 function startGame() {
+    loadChart();
+  
     if (gameRunning) return;
 
     gameRunning = true;
