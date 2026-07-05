@@ -172,3 +172,10 @@ if (note.classList.contains("hold")) {
 
 });
 }
+
+async function loadChart() {
+    const response = await fetch("charts/tutorial.json");
+    chart = await response.json();
+
+    console.log(chart);
+}
