@@ -4,6 +4,7 @@ const scoreText = document.getElementById("score");
 const comboText = document.getElementById("combo");
 const judgeText = document.getElementById("judge");
 
+let chart = null;
 let score = 0;
 let combo = 0;
 let gameRunning = false;
