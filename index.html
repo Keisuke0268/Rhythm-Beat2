@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RhythmBeat v2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+    <h1>RhythmBeat v2</h1>
+
+    <div class="menu-item">
+        <label>曲</label>
+        <select id="songSelect">
+            <option value="tutorial">Tutorial Song</option>
+        </select>
+    </div>
+
+    <div class="menu-item">
+        <label>難易度</label>
+        <select id="difficulty">
+            <option value="easy">Easy Lv.5</option>
+            <option value="normal">Normal Lv.10</option>
+            <option value="hard">Hard Lv.18</option>
+            <option value="expert">Expert Lv.25</option>
+        </select>
+    </div>
+
+    <button id="startButton">START</button>
+</div>
+
+<div id="game">
+
+    <div id="judgeLine"></div>
+
+    <div class="lane" data-lane="0"></div>
+    <div class="lane" data-lane="1"></div>
+    <div class="lane" data-lane="2"></div>
+    <div class="lane" data-lane="3"></div>
+
+</div>
+
+<div id="hud">
+
+    <div id="judge">READY</div>
+
+    <div class="status">
+        Score :
+        <span id="score">0</span>
+    </div>
+
+    <div class="status">
+        Combo :
+        <span id="combo">0</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
