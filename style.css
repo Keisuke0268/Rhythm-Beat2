@@ -102,6 +102,15 @@ button:active {
     left:10%;
     border-radius:12px;
     background:#ff66cc;
+
+.slide {
+    position: absolute;
+    width: 80%;
+    height: 24px;
+    left: 10%;
+    border-radius: 12px;
+    background: #aa66ff;
+    }
 }
 #judgeLine {
     position: absolute;
