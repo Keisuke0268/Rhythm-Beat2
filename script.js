@@ -1,3 +1,5 @@
+let noteIndex = 0;
+let gameStartTime = 0;
 const lanes = document.querySelectorAll(".lane");
 const startButton = document.getElementById("startButton");
 const scoreText = document.getElementById("score");
@@ -26,7 +28,9 @@ function startGame() {
     updateHUD();
     judgeText.textContent = "READY";
 
-    noteTimer = setInterval(spawnNote, 800);
+    gameStartTime = Date.now();
+
+noteTimer = setInterval(updateChart, 16);
 }
 
 startButton.addEventListener("click", startGame);
@@ -180,4 +184,42 @@ async function loadChart() {
     chart = await response.json();
 
     console.log(chart);
+}
+function updateChart() {
+
+    if (!chart) return;
+
+    const elapsed = Date.now() - gameStartTime;
+
+    while (
+        noteIndex < chart.notes.length &&
+        elapsed >= chart.notes[noteIndex].time
+    ) {
+
+        spawnChartNote(chart.notes[noteIndex]);
+
+        noteIndex++;
+    }
+
+}
+function spawnChartNote(noteData) {
+
+    const lane = lanes[noteData.lane];
+
+    const note = document.createElement("div");
+
+    if (noteData.type === "hold") {
+        note.className = "hold";
+    } else if (noteData.type === "flick") {
+        note.className = "flick";
+    } else if (noteData.type === "slide") {
+        note.className = "slide";
+    } else {
+        note.className = "note";
+    }
+
+    note.style.top = "0px";
+
+    lane.appendChild(note);
+
 }
