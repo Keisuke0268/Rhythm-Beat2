@@ -222,4 +222,70 @@ function spawnChartNote(noteData) {
 
     lane.appendChild(note);
 
+    moveNote(note);
+    
+}
+function moveNote(note) {
+
+    let y = 0;
+
+    const fall = setInterval(() => {
+
+        if (!gameRunning) {
+            clearInterval(fall);
+            return;
+        }
+
+        y += 4;
+        note.style.top = y + "px";
+
+        if (y >= 540) {
+
+            clearInterval(fall);
+
+            if (note.parentNode) {
+                note.remove();
+
+                combo = 0;
+                judgeText.textContent = "MISS";
+
+                updateHUD();
+            }
+
+        }
+
+    }, 16);
+
+    addJudgeEvent(note, fall, () => y);
+
+}
+function addJudgeEvent(note, fall, getY) {
+
+    note.addEventListener("click", () => {
+
+        if (!note.parentNode) return;
+
+        clearInterval(fall);
+
+        const y = getY();
+
+        if (y >= 500) {
+            judgeText.textContent = "PERFECT";
+            score += 1000;
+        } else if (y >= 460) {
+            judgeText.textContent = "GREAT";
+            score += 700;
+        } else {
+            judgeText.textContent = "GOOD";
+            score += 400;
+        }
+
+        combo++;
+
+        updateHUD();
+
+        note.remove();
+
+    });
+
 }
