@@ -5,6 +5,7 @@ const startButton = document.getElementById("startButton");
 const scoreText = document.getElementById("score");
 const comboText = document.getElementById("combo");
 const judgeText = document.getElementById("judge");
+const music = document.getElementById("music");
 
 let chart = null;
 let score = 0;
@@ -23,6 +24,8 @@ function startGame() {
     if (gameRunning) return;
 
     gameRunning = true;
+    music.currentTime = 0;
+music.play();
     score = 0;
     combo = 0;
     updateHUD();
