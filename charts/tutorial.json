@@ -4,6 +4,18 @@
     { "time": 1500, "lane": 1, "type": "tap" },
     { "time": 2000, "lane": 2, "type": "hold" },
     { "time": 3000, "lane": 3, "type": "flick" },
-    { "time": 4000, "lane": 1, "type": "slide" }
+    { "time": 4000, "lane": 1, "type": "slide" },
+
+    { "time": 5000, "lane": 0, "type": "tap" },
+    { "time": 5500, "lane": 2, "type": "tap" },
+    { "time": 6000, "lane": 3, "type": "hold" },
+    { "time": 7500, "lane": 1, "type": "flick" },
+    { "time": 8500, "lane": 0, "type": "slide" },
+
+    { "time": 9500, "lane": 2, "type": "tap" },
+    { "time": 10000, "lane": 3, "type": "tap" },
+    { "time": 10500, "lane": 1, "type": "tap" },
+    { "time": 11000, "lane": 0, "type": "hold" },
+    { "time": 12500, "lane": 2, "type": "flick" }
   ]
 }
