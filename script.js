@@ -1,5 +1,3 @@
-let noteIndex = 0;
-let gameStartTime = 0;
 const songs = {
     tutorial: {
         chart: "charts/千本桜.json",
@@ -13,7 +11,13 @@ const scoreText = document.getElementById("score");
 const comboText = document.getElementById("combo");
 const judgeText = document.getElementById("judge");
 const music = document.getElementById("music");
+const result = document.getElementById("result");
+const finalScore = document.getElementById("finalScore");
+const finalCombo = document.getElementById("finalCombo");
+const retryButton = document.getElementById("retryButton");
 
+let noteIndex = 0;
+let gameStartTime = 0;
 let chart = null;
 let score = 0;
 let combo = 0;
@@ -304,3 +308,22 @@ function addJudgeEvent(note, fall, getY) {
     });
 
 }
+
+function showResult() {
+
+    gameRunning = false;
+
+    clearInterval(noteTimer);
+
+    finalScore.textContent = score;
+    finalCombo.textContent = combo;
+
+    result.style.display = "block";
+
+}
+
+retryButton.addEventListener("click", () => {
+
+    location.reload();
+
+});
