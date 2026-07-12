@@ -1,5 +1,12 @@
 let noteIndex = 0;
 let gameStartTime = 0;
+const songs = {
+    千本桜: {
+        chart: "charts/千本桜.json",
+        audio: "audio/千本桜.mp3"
+    }
+};
+const songSelect = document.getElementById("songSelect");
 const lanes = document.querySelectorAll(".lane");
 const startButton = document.getElementById("startButton");
 const scoreText = document.getElementById("score");
@@ -183,10 +190,15 @@ if (note.classList.contains("hold")) {
 }
 
 async function loadChart() {
-    const response = await fetch("charts/tutorial.json");
+
+    const selected = songs[songSelect.value];
+
+    const response = await fetch(selected.chart);
+
     chart = await response.json();
 
-    console.log(chart);
+    music.src = selected.audio;
+
 }
 function updateChart() {
 
