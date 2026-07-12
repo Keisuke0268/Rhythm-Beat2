@@ -140,3 +140,21 @@ button:active {
     font-size: 22px;
     margin: 6px 0;
   }
+
+#result {
+    width: 320px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#result h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+#retryButton {
+    margin-top: 15px;
+}
