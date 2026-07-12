@@ -1,7 +1,7 @@
 let noteIndex = 0;
 let gameStartTime = 0;
 const songs = {
-    千本桜: {
+    tutorial: {
         chart: "charts/千本桜.json",
         audio: "audio/千本桜.mp3"
     }
